@@ -1,17 +1,30 @@
-{ "name": "wangtiles"
-, "description": "Combines JSON files in one"
-, "keywords": [ "javascript", "nodejs", "wang", "tiles", "images" ]
-, "version": "0.0.1alpha"
-, "author": "Angel 'Java' Lopez <webmaster@ajlopez.com> (http://www.ajlopez.com)"
-, "repository": { "type": "git", "url": "git://github.com/ajlopez/WangTilesJS.git" }
-, "main": "./lib/wangtiles.js"
-, "engines": { "node": ">= 0.6.0" }
-, "scripts": {
+{
+  "name": "wangtiles",
+  "description": "Combines JSON files in one",
+  "keywords": [
+    "javascript",
+    "nodejs",
+    "wang",
+    "tiles",
+    "images"
+  ],
+  "version": "0.0.1alpha",
+  "author": "Angel 'Java' Lopez <webmaster@ajlopez.com> (http://www.ajlopez.com)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ajlopez/WangTilesJS.git"
+  },
+  "main": "./lib/wangtiles.js",
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "scripts": {
     "test": "simpleunit ./test"
-  }
-, "dependencies": {
-  }
-, "devDependencies": {
+  },
+  "dependencies": {
+    "node-png": "^0.4.3"
+  },
+  "devDependencies": {
     "simpleunit": "0.0.7"
   }
 }
