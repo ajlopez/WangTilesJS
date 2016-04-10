@@ -26,6 +26,11 @@ TBD
 
 MIT
 
+## References
+
+- [Wang Tiles](https://en.wikipedia.org/wiki/Wang_tile)
+- [Web Colors](http://www.rapidtables.com/web/color/)
+
 ## Contribution
 
 Feel free to [file issues](https://github.com/ajlopez/WangTilesJS) and submit
