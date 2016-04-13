@@ -10,3 +10,11 @@ exports['create empty plane'] = function (test) {
         for (var y = 0; y < 10; y++)            
             test.equal(plane.get(x, y), null);
 };
+
+exports['plane with width and height'] = function (test) {
+    var plane = wt.plane(10, 10);
+    
+    test.ok(plane);
+    test.equal(plane.width(), 10);
+    test.equal(plane.height(), 10);
+};
