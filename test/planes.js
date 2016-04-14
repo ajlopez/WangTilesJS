@@ -18,3 +18,16 @@ exports['plane with width and height'] = function (test) {
     test.equal(plane.width(), 10);
     test.equal(plane.height(), 10);
 };
+
+exports['put and get tile'] = function (test) {
+    var plane = wt.plane(10, 10);
+    var tile = wt.tile([0,1,2,3]);
+    
+    plane.put(0, 0, tile);
+    
+    var result = plane.get(0, 0);
+    
+    test.ok(result);
+    test.strictEqual(result, tile);
+};
+
