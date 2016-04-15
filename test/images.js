@@ -1,0 +1,1 @@
+var wt = require('..');exports['create image from plane'] = function (test) {    var plane = wt.plane(5, 5);    var image = wt.image(plane, 100);        test.ok(image);    test.equal(image.width, 500);    test.equal(image.height, 500);}
