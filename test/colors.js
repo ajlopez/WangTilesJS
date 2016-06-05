@@ -13,7 +13,7 @@ exports['get rgb colors'] = function (test) {
 exports['get colors by number'] = function (test) {
     for (var n in names) {
         var name = names[n];
-        test.deepEqual(wt.color(n), wt.rgb(name));
+        test.deepEqual(wt.color(parseInt(n)), wt.rgb(name));
     }
 }
 
