@@ -4,8 +4,11 @@ var wt = require('./lib/wangtiles');
 var plane = wt.plane(10, 10);
 var image = wt.image(plane, 100);
 
-var tile = wt.tile([0, 1, 2, 3]);
-plane.put(1, 1, tile);
+for (var x = 0; x < 10; x++)
+    for (var y = 0; y < 10; y++) {
+        var tile = wt.tile([Math.floor(Math.random() * 6), Math.floor(Math.random() * 6), Math.floor(Math.random() * 6), Math.floor(Math.random() * 6)]);
+        plane.put(x, y, tile);
+    }
 
 console.log('width', image.width());
 console.log('height', image.height());
