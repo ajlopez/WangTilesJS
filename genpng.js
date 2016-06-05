@@ -20,7 +20,7 @@ for (var k = 0; k < totalsize; k += 4) {
 }
 
 // north: yellow
-for (var y = 1; y <= size - 1; y++)
+for (var y = 1; y <= size / 2 - 1; y++)
     for (var x = y; x < size - y; x++) {
         var k = (y * size + x) * 4;
         
@@ -31,8 +31,8 @@ for (var y = 1; y <= size - 1; y++)
     }
 
 // west: red
-for (var y = 1; y <= size - 1; y++)
-    for (var x = 1; x < y; x++) {
+for (var x = 1; x <= size / 2 - 1; x++)
+    for (var y = x; y < size - x; y++) {
         var k = (y * size + x) * 4;
         
         data[k] = 255;
@@ -42,8 +42,8 @@ for (var y = 1; y <= size - 1; y++)
     }
 
 // east: blue
-for (var y = 1; y <= size - 1; y++)
-    for (var x = 1; x < y; x++) {
+for (var x = 1; x <= size / 2 - 1; x++)
+    for (var y = x; y < size - x; y++) {
         var k = (y * size + size - 1 - x) * 4;
         
         data[k] = 0;
@@ -53,7 +53,7 @@ for (var y = 1; y <= size - 1; y++)
     }
 
 // south: lime
-for (var y = 1; y <= size - 1; y++)
+for (var y = 2; y <= size / 2 - 1; y++)
     for (var x = y; x < size - y; x++) {
         var k = ((size - y) * size + x) * 4;
         
