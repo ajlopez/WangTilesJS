@@ -8,5 +8,7 @@ console.log('width', image.width());
 console.log('height', image.height());
 console.log('size', image.size());
 
+image.fill('white');
+
 console.log('save');
 image.save('plane.png');
