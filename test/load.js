@@ -37,3 +37,31 @@ exports['load plane with tile'] = function (test) {
     test.equal(result.south(), 3);
 };
 
+exports['load plane with tile with colors'] = function (test) {
+    var plane = wt.loadPlane({ 
+        width: 10, 
+        height: 5,
+        positions: [
+            {
+                x: 1,
+                y: 2,
+                tile: ['yellow', 'red', 'blue', 'lime']
+            }
+        ]
+    });
+    
+    test.ok(plane);
+    test.equal(plane.width(), 10);
+    test.equal(plane.height(), 5);
+    
+    test.equal(plane.get(0, 0), null);
+    
+    var result = plane.get(1, 2);
+    
+    test.ok(result);
+    test.equal(result.east(), 'yellow');
+    test.equal(result.north(), 'red');
+    test.equal(result.west(), 'blue');
+    test.equal(result.south(), 'lime');
+};
+
