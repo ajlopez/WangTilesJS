@@ -1,8 +1,8 @@
 
-var wt = require('..');
+const wt = require('..');
 
 exports['load plane'] = function (test) {
-    var plane = wt.loadPlane({ width: 10, height: 5 });
+    const plane = wt.loadPlane({ width: 10, height: 5 });
     
     test.ok(plane);
     test.equal(plane.width(), 10);
@@ -10,7 +10,7 @@ exports['load plane'] = function (test) {
 };
 
 exports['load plane with tile'] = function (test) {
-    var plane = wt.loadPlane({ 
+    const plane = wt.loadPlane({ 
         width: 10, 
         height: 5,
         positions: [
@@ -28,7 +28,7 @@ exports['load plane with tile'] = function (test) {
     
     test.equal(plane.get(0, 0), null);
     
-    var result = plane.get(1, 2);
+    const result = plane.get(1, 2);
     
     test.ok(result);
     test.equal(result.east(), 0);
@@ -38,7 +38,7 @@ exports['load plane with tile'] = function (test) {
 };
 
 exports['load plane with tile with colors'] = function (test) {
-    var plane = wt.loadPlane({ 
+    const plane = wt.loadPlane({ 
         width: 10, 
         height: 5,
         positions: [
@@ -56,7 +56,7 @@ exports['load plane with tile with colors'] = function (test) {
     
     test.equal(plane.get(0, 0), null);
     
-    var result = plane.get(1, 2);
+    const result = plane.get(1, 2);
     
     test.ok(result);
     test.equal(result.east(), 'yellow');
@@ -66,7 +66,7 @@ exports['load plane with tile with colors'] = function (test) {
 };
 
 exports['load plane with tile with colors'] = function (test) {
-    var plane = wt.loadPlane({ 
+    const plane = wt.loadPlane({ 
         width: 10, 
         height: 5,
         positions: [
@@ -84,7 +84,7 @@ exports['load plane with tile with colors'] = function (test) {
     
     test.equal(plane.get(0, 0), null);
     
-    var result = plane.get(1, 2);
+    const result = plane.get(1, 2);
     
     test.ok(result);
     test.equal(result.east(), 'yellow');
@@ -94,7 +94,7 @@ exports['load plane with tile with colors'] = function (test) {
 };
 
 exports['load plane with tile with definition'] = function (test) {
-    var plane = wt.loadPlane({ 
+    const plane = wt.loadPlane({ 
         width: 10, 
         height: 5,
         tiles: {
@@ -115,7 +115,7 @@ exports['load plane with tile with definition'] = function (test) {
     
     test.equal(plane.get(0, 0), null);
     
-    var result = plane.get(1, 2);
+    const result = plane.get(1, 2);
     
     test.ok(result);
     test.equal(result.east(), 'yellow');
