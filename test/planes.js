@@ -1,18 +1,18 @@
 
-var wt = require('..');
+const wt = require('..');
 
 exports['create empty plane'] = function (test) {
-    var plane = wt.plane(10, 10);
+    const plane = wt.plane(10, 10);
     
     test.ok(plane);
     
-    for (var x = 0; x < 10; x++)
-        for (var y = 0; y < 10; y++)            
+    for (let x = 0; x < 10; x++)
+        for (let y = 0; y < 10; y++)            
             test.equal(plane.get(x, y), null);
 };
 
 exports['plane with width and height'] = function (test) {
-    var plane = wt.plane(10, 10);
+    const plane = wt.plane(10, 10);
     
     test.ok(plane);
     test.equal(plane.width(), 10);
@@ -20,12 +20,12 @@ exports['plane with width and height'] = function (test) {
 };
 
 exports['put and get tile'] = function (test) {
-    var plane = wt.plane(10, 10);
-    var tile = wt.tile([0,1,2,3]);
+    const plane = wt.plane(10, 10);
+    const tile = wt.tile([0,1,2,3]);
     
     plane.put(0, 0, tile);
     
-    var result = plane.get(0, 0);
+    const result = plane.get(0, 0);
     
     test.ok(result);
     test.strictEqual(result, tile);
