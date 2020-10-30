@@ -1,5 +1,5 @@
 
-var wt = require('..');
+const wt = require('..');
 
 exports['get name colors as rgb array'] = function (test) {
     test.deepEqual(wt.rgb('red'), [255, 0, 0]);

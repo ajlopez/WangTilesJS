@@ -1,8 +1,8 @@
 
-var wt = require('..');
+const wt = require('..');
 
 exports['create tile with colors'] = function (test) {
-    var tile = wt.tile([0, 1, 2, 3]);
+    const tile = wt.tile([0, 1, 2, 3]);
     
     test.ok(tile);
     test.equal(tile.east(), 0);
@@ -12,7 +12,7 @@ exports['create tile with colors'] = function (test) {
 };
 
 exports['create tile using string'] = function (test) {
-    var tile = wt.tile("0123");
+    const tile = wt.tile("0123");
     
     test.ok(tile);
     test.equal(tile.east(), 0);
@@ -20,3 +20,4 @@ exports['create tile using string'] = function (test) {
     test.equal(tile.west(), 2);
     test.equal(tile.south(), 3);
 };
+
